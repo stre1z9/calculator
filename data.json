@@ -1,0 +1,55 @@
+{
+    "basePrice": 500,
+    "colors": [
+        {
+            "name": "Белый",
+            "value": "white",
+            "priceModifier": 0
+        },
+        {
+            "name": "Черный",
+            "value": "black",
+            "priceModifier": 100
+        },
+        {
+            "name": "Красный",
+            "value": "red",
+            "priceModifier": 80
+        },
+        {
+            "name": "Синий",
+            "value": "blue",
+            "priceModifier": 70
+        },
+        {
+            "name": "Зеленый",
+            "value": "green",
+            "priceModifier": 60
+        }
+    ],
+    "densities": [
+        {
+            "value": "120",
+            "priceModifier": -50
+        },
+        {
+            "value": "150",
+            "priceModifier": 0
+        },
+        {
+            "value": "180",
+            "priceModifier": 80
+        },
+        {
+            "value": "200",
+            "priceModifier": 120
+        }
+    ],
+    "sizes": {
+        "S": 0,
+        "M": 0,
+        "L": 50,
+        "XL": 100,
+        "XXL": 150
+    }
+}
