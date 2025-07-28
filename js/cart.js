@@ -1,4 +1,4 @@
-import { fetchData } from '../data.js';
+import { fetchData } from './data.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const data = await fetchData();
