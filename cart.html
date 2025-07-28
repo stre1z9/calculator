@@ -14,17 +14,21 @@
         
         <h2>Дополнительные услуги</h2>
         <form id="checkoutForm">
-            <label>Доставка:</label>
+            <label>Оплата:</label>
             <select id="delivery">
                 <option value="cash">Наличные (0% комиссии)</option>
                 <option value="card">Перевод (+2%)</option>
             </select>
-            
+            <label>Доставка:</label>
+            <select id="delivery">
+                <option value="cash">Самовывоз</option>
+                <option value="card">Доставка (+2%)</option>
+            </select>
             <label>Услуги:</label>
             <select id="service">
                 <option value="none">Без услуг</option>
-                <option value="legal">Для ЧЗ (+8%)</option>
-                <option value="marking">Маркировка (+12%)</option>
+                <option value="legal">Обыкновенная покупка (+8%)</option>
+                <option value="marking">Маркировка ЧЗ (+12%)</option>
             </select>
             
             <label><input type="checkbox" id="packaging"> Упаковка (+15 руб)</label>
