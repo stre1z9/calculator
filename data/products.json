@@ -1,7 +1,7 @@
 {
   "cuts": [
     { "id": "oversize", "name": "Оверсайз", "price": 0 },
-    { "id": "regular", "name": "Прямой крой", "price": 0 }
+    { "id": "regular", "name": "Прямой крой", "price": 200 }
   ],
   "densities": [
     { "value": 180, "price": 1000, "material": "100% хлопок (лёгкий, дышащий)" },
