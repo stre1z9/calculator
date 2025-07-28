@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Ваша корзина</h1>
+        <div id="cartItems"></div>
+        <div id="cartSummary"></div>
+        
+        <h2>Дополнительные услуги</h2>
+        <form id="checkoutForm">
+            <label>Доставка:</label>
+            <select id="delivery">
+                <option value="cash">Наличные (0% комиссии)</option>
+                <option value="card">Перевод (+2%)</option>
+            </select>
+            
+            <label>Услуги:</label>
+            <select id="service">
+                <option value="none">Без услуг</option>
+                <option value="legal">Для ЧЗ (+8%)</option>
+                <option value="marking">Маркировка (+12%)</option>
+            </select>
+            
+            <label><input type="checkbox" id="packaging"> Упаковка (+15 руб)</label>
+            
+            <button type="button" id="calculateTotal">Пересчитать</button>
+        </form>
+        
+        <div id="orderTotal" class="total-price"></div>
+        <a href="index.html" class="back-link">Вернуться к покупкам</a>
+    </div>
+
+    <script src="./js/cart.js" type="module"></script>
+</body>
+</html>

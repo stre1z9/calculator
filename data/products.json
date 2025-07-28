@@ -1,0 +1,21 @@
+{
+  "cuts": [
+    { "id": "oversize", "name": "Оверсайз", "price": 0 },
+    { "id": "regular", "name": "Прямой крой", "price": 0 }
+  ],
+  "densities": [
+    { "value": 180, "price": 1000, "material": "100% хлопок (лёгкий, дышащий)" },
+    { "value": 210, "price": 1200, "material": "80% хлопок, 20% льняные волокна" },
+    { "value": 240, "price": 1400, "material": "100% хлопок (плотный)" },
+    { "value": 245, "price": 1500, "material": "95% хлопок, 5% эластан" },
+    { "value": 260, "price": 1600, "material": "100% органический хлопок" }
+  ],
+  "sizes": ["S", "M", "L", "XL"],
+  "prints": [
+    { "id": "none", "name": "Без принта", "price": 0 },
+    { "id": "A5", "name": "A5", "price": 300 },
+    { "id": "A4", "name": "A4", "price": 500 },
+    { "id": "A3", "name": "A3", "price": 800 },
+    { "id": "sleeve", "name": "На плече", "price": 400 }
+  ]
+}
