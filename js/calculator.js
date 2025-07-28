@@ -15,7 +15,6 @@ function initCalculator(data) {
     const finalPrice = document.getElementById('finalPrice');
     const addToCartBtn = document.getElementById('addToCart');
 
-    // Заполняем выпадающие списки из JSON
     data.cuts.forEach(cut => {
         cutSelect.innerHTML += `<option value="${cut.id}">${cut.name} (+${cut.price} руб)</option>`;
     });
@@ -32,14 +31,12 @@ function initCalculator(data) {
         printSelect.innerHTML += `<option value="${print.id}">${print.name} (+${print.price} руб)</option>`;
     });
 
-    // Обновляем информацию о материале
     densitySelect.addEventListener('change', () => {
         const selectedDensity = data.densities.find(d => d.value == densitySelect.value);
         materialInfo.innerHTML = `<strong>Состав:</strong> ${selectedDensity.material}`;
         calculatePrice();
     });
 
-    // Пересчёт цены при изменении параметров
     [cutSelect, densitySelect, sizeSelect, printSelect, quantityInput].forEach(element => {
         element.addEventListener('change', calculatePrice);
     });
@@ -50,8 +47,7 @@ function initCalculator(data) {
         const quantity = parseInt(quantityInput.value);
         
         let price = density.price + print.price;
-        
-        // Оптовые скидки
+
         let discount = 0;
         if (quantity >= 100) discount = 0.25;
         else if (quantity >= 50) discount = 0.15;
@@ -62,7 +58,6 @@ function initCalculator(data) {
         return price;
     }
 
-    // Добавление в корзину
     addToCartBtn.addEventListener('click', () => {
         const item = {
             cut: cutSelect.value,
