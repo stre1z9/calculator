@@ -42,21 +42,22 @@ function initCalculator(data) {
     });
 
     function calculatePrice() {
-        const density = data.densities.find(d => d.value == densitySelect.value);
-        const print = data.prints.find(p => p.id == printSelect.value);
-        const quantity = parseInt(quantityInput.value);
-        
-        let price = density.price + print.price;
+    const cut = data.cuts.find(c => c.id === cutSelect.value); 
+    const density = data.densities.find(d => d.value == densitySelect.value);
+    const print = data.prints.find(p => p.id == printSelect.value);
+    const quantity = parseInt(quantityInput.value);
 
-        let discount = 0;
-        if (quantity >= 100) discount = 0.25;
-        else if (quantity >= 50) discount = 0.15;
-        else if (quantity >= 10) discount = 0.05;
-        
-        price = price * (1 - discount) * quantity;
-        finalPrice.textContent = `Итого: ${price.toFixed(2)} руб`;
-        return price;
-    }
+    let price = density.price + cut.price + print.price;
+    
+    let discount = 0;
+    if (quantity >= 100) discount = 0.25;
+    else if (quantity >= 50) discount = 0.15;
+    else if (quantity >= 10) discount = 0.05;
+    
+    price = price * (1 - discount) * quantity;
+    finalPrice.textContent = `Итого: ${price.toFixed(2)} руб`;
+    return price;
+}
 
     addToCartBtn.addEventListener('click', () => {
         const item = {
